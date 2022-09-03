@@ -1,0 +1,16 @@
+#madym_DicomConvert
+make_t1 = 1
+make_t1_means = 1
+sort = 0
+dicom_dir = ../dicom-raw/vfa
+dicom_series = vfa_sort/DCM_series
+T1_series = [1 2 3 4 5 6]
+T1_dir = vfa_convert
+T1_vols = [FA_3deg, FA_6deg, FA_9deg, FA_15deg, FA_24deg, FA_35deg]
+img_dt_type = 16
+img_fmt_w = NIFTI
+dicom_offset = 0
+dicom_scale = 1
+flip_x = 0
+flip_y = 1
+output = vfa_convert

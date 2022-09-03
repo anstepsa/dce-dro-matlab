@@ -1,0 +1,5 @@
+#madym_DicomConvert
+sort = 1
+dicom_dir = ../dicom-raw/dyn-augmented-hdr
+output = dyn_sort
+overwrite = 1

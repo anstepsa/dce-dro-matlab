@@ -1,0 +1,18 @@
+#madym_DicomConvert
+make_dyn = 1 
+make_dyn_mean = 1
+sort = 0
+dicom_dir = ../dicom-raw/dyn-augmented-hdr
+dicom_series = dyn_sort/DCM_series
+dyn_series = 1
+dyn = dyn_
+dyn_dir = dyn_convert
+sequence_format = %03u
+img_dt_type = 16
+img_fmt_w = NIFTI
+dicom_offset = 0
+dicom_scale = 1
+flip_x = 0
+flip_y = 1
+output = dyn_convert
+overwrite = 1

@@ -1,0 +1,14 @@
+#madym_DicomConvert
+make_single = 1
+single_series = 1 #Series index from the sort stage
+vol_name = b1_convert #Name of the output image
+sort = 0
+dicom_dir = ../dicom-raw/b1
+dicom_series = b1_sort/DCM_series
+img_dt_type = 16
+img_fmt_w = NIFTI
+dicom_offset = 0
+dicom_scale = 1
+flip_x = 0
+flip_y = 1
+output = b1_convert

@@ -1,0 +1,4 @@
+#madym_DicomConvert
+sort = 1
+dicom_dir = ../dicom-raw/b1
+output = b1_sort

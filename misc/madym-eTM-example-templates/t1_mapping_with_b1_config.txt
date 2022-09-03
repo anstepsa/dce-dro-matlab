@@ -1,0 +1,23 @@
+#madym_T1
+#replace [...] with correct path...
+B1 = C:/[...]/ANON_MADYM/eTM_examp_001/work/b1_convert/b1_convert.nii
+B1_scaling = 100
+T1_method = VFA_B1
+T1_noise = 0
+T1_vols = [C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_3deg_mean.nii,C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_6deg_mean.nii,C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_9deg_mean.nii,C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_15deg_mean.nii,C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_24deg_mean.nii,C:/[...]/ANON_MADYM/eTM_examp_001/work/vfa_convert/FA_35deg_mean.nii]
+TR = 0
+audit = AuditLog.txt
+audit_dir = C:/[...]/ANON_MADYM/eTM_examp_001/work/audit_logs
+config_out = config.txt
+err = ""
+img_fmt_r = NIFTI
+img_fmt_w = NIFTI
+no_audit = 0
+no_log = 0
+output = C:/[...]/ANON_MADYM/eTM_examp_001/work/t1
+output_root = ""
+overwrite = 1
+program_log = ProgramLog.txt
+quiet = 0
+roi = ""
+voxel_size_warn_only = 0
