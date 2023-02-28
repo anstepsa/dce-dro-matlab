@@ -6,18 +6,12 @@ function Cv = model_apply_2CXM(k, Cp, t)
 % Implementation (adapted slightly) from ROCKETSHIP code
 
     % N.B. Time unit is 'min' here throughout...
-   
-    Ktrans = k(1);
+ 
+    PS     = k(1);
     ve     = k(2);
     vp     = k(3);
     fp     = k(4);
  
-    if Ktrans >= fp
-        PS = 10^8; % A large value, helps with Inf and NaN errors
-    else
-        PS = Ktrans * fp /(fp - Ktrans);
-    end
-    
     E = PS /(PS + fp);
     e = ve /(vp + ve);
     

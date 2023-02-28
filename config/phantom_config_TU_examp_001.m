@@ -4,8 +4,8 @@
 function config = phantom_config_TU_examp_001(config)
 
     % Kinetic variables to be reported from model...
-    config.VARIABLES     = {'ktrans','ps','vp'};
-    config.EXTRA_MAPS    = {'fp','tp'};
+    config.VARIABLES     = {'ps','vp','fp'};
+    config.EXTRA_MAPS    = {'ktrans','tp'};
     
     % Lump these together...
     config.KIN_VARS      = cat(2, config.VARIABLES, config.EXTRA_MAPS);
@@ -25,14 +25,14 @@ function config = phantom_config_TU_examp_001(config)
     config.NUM_BLOCKS    = config.NUM_ROWS * config.NUM_COLS;
 
     % DCE indices to start with...
-    config.KTRANS        = config_read_parameter_values(config.KIN_VARS{1}, config.PARAM_IN_FILE, config); 
-    config.PS            = config_read_parameter_values(config.KIN_VARS{2}, config.PARAM_IN_FILE, config); 
-    config.VP            = config_read_parameter_values(config.KIN_VARS{3}, config.PARAM_IN_FILE, config); 
-    config.FP            = config_read_parameter_values(config.KIN_VARS{4}, config.PARAM_IN_FILE, config); 
+    config.PS            = config_read_parameter_values(config.KIN_VARS{1}, config.PARAM_IN_FILE, config); 
+    config.VP            = config_read_parameter_values(config.KIN_VARS{2}, config.PARAM_IN_FILE, config); 
+    config.FP            = config_read_parameter_values(config.KIN_VARS{3}, config.PARAM_IN_FILE, config); 
+    config.KTRANS        = config_read_parameter_values(config.KIN_VARS{4}, config.PARAM_IN_FILE, config); 
     config.TP            = config_read_parameter_values(config.KIN_VARS{5}, config.PARAM_IN_FILE, config); 
 
-    % Scale factors for output maps [ktrans, ps, vp, fp, tp]...
-    config.MAP_SF        = [1000.0, 1000.0, 10000.0, 1000.0, 1000.0];
+    % Scale factors for output maps [ps, vp, fp, ktrans, tp]...
+    config.MAP_SF        = [1000.0, 10000.0, 1000.0, 1000.0, 1000.0];
 
     % Units of variables...
     config.UNITS         = {'/min', '/min', '', '/min', 's'};

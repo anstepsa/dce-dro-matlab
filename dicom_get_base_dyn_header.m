@@ -17,8 +17,6 @@ function hd = dicom_get_base_dyn_header(config)
 
     % ------------------------------------------------
     
-    %hd = dicominfo(fullfile(config.WORK_PATH, config.HEADER_DYN));
- 
     hd.PatientName.FamilyName = config.PHANTOM_ID;
     hd.PatientID              = config.PHANTOM_ID;
     

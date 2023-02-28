@@ -1,6 +1,6 @@
 # dce-dro-matlab
- 
-DCE-DRO v 2.0  2022
+
+DCE-DRO v 2.1  2023
 
 (c) ---------------
 All rights reserved
@@ -78,7 +78,7 @@ In 'run_construct_digital_phantom.m' :-
                 % (see e.g. 'model_apply_eTM.m' as an example)
                 
                 % N.B. If adding a new model implementation, also add relevant code
-                % to the switch statements on line 223 of 'run_construct_digital_phantom.m'
+                % to the switch statements on line 227 of 'run_construct_digital_phantom.m'
                 % and on line 16 of 'dce_calc_gd_curves_from_model.m'.
 
     % Two further comma-separated variable 'spreadsheet' files must be

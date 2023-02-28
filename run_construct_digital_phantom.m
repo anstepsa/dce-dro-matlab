@@ -2,9 +2,9 @@
 
     SCRIPT TO CONSTRUCT A DIGITAL REFERENCE OBJECT FOR TESTING DCE-MRI ANALYSIS CODE
 
-    Date    : 31-Mar-2022
+    Date    : 27-Feb-2023
     Authors : -------
-    Version : 2.00
+    Version : 2.1
 
     [Written and tested under MATLAB R2019b]
 
@@ -27,7 +27,7 @@ function run_construct_digital_phantom()
     config.STUDY          = 'EXAMPLES';  
 
     % Kinetic model to be used...
-    config.MODEL          = 'eTM';    %  TM | eTM | TU | 2CXM | PLK (Patlak) | ...
+    config.MODEL          = '2CXM';    %  TM | eTM | TU | 2CXM | PLK (Patlak) | ...
 
     % A description string for the phantom...
     config.PHANTOM_DESC   = 'examp_001';
@@ -68,7 +68,7 @@ function run_construct_digital_phantom()
                 % (see e.g. 'model_apply_eTM.m' as an example)
                 
                 % N.B. If adding a new model implementation, also add relevant code
-                % to the switch statements on line 223 of 'run_construct_digital_phantom.m'
+                % to the switch statements on line 227 of 'run_construct_digital_phantom.m'
                 % and on line 16 of 'dce_calc_gd_curves_from_model.m'.
 
     % Two further comma-separated variable 'spreadsheet' files must be
@@ -225,14 +225,17 @@ function run_construct_digital_phantom()
 
             % Assign kinetic model input parameter values...
             switch config.MODEL
+                
+                % N.B. For each model, k(:,v) must be assigned in order listed in config.KIN_VARS... 
+                
                 case 'TM'
                     k(:,v) = [config.KTRANS(v, this_slice), config.VE(v, this_slice), config.KEP(v, this_slice)]; %#ok<AGROW>
                 case 'eTM'
                     k(:,v) = [config.KTRANS(v, this_slice), config.VE(v, this_slice), config.VP(v, this_slice), config.KEP(v, this_slice)]; %#ok<AGROW>
                 case 'TU'
-                    k(:,v) = [config.KTRANS(v, this_slice), config.PS(v, this_slice), config.VP(v, this_slice), config.FP(v, this_slice), config.TP(v, this_slice)]; %#ok<AGROW>
+                    k(:,v) = [config.PS(v, this_slice), config.VP(v, this_slice), config.FP(v, this_slice), config.KTRANS(v, this_slice), config.TP(v, this_slice)]; %#ok<AGROW>
                 case '2CXM'
-                    k(:,v) = [config.KTRANS(v, this_slice), config.VE(v, this_slice), config.VP(v, this_slice), config.FP(v, this_slice), config.PS(v, this_slice), config.TP(v, this_slice)]; %#ok<AGROW>
+                    k(:,v) = [config.PS(v, this_slice), config.VE(v, this_slice), config.VP(v, this_slice), config.FP(v, this_slice), config.KTRANS(v, this_slice), config.TP(v, this_slice)]; %#ok<AGROW>
                 case 'PLK'
                     k(:,v) = [config.KTRANS(v, this_slice), config.VP(v, this_slice)]; %#ok<AGROW>
                 otherwise
