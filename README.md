@@ -2,7 +2,7 @@
 
 DCE-DRO v 2.1  2023
 
-(c) ---------------
+(c) Andrew Gill (Radiology, University of Cambridge)
 All rights reserved
 
 This program is free software; you can redistribute it and/or modify

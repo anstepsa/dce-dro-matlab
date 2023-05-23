@@ -3,7 +3,7 @@
     SCRIPT TO CONSTRUCT A DIGITAL REFERENCE OBJECT FOR TESTING DCE-MRI ANALYSIS CODE
 
     Date    : 27-Feb-2023
-    Authors : -------
+    Authors : Andrew Gill, Ph.D. (Radiology, University of Cambridge)
     Version : 2.1
 
     [Written and tested under MATLAB R2019b]
